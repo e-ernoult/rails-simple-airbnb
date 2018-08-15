@@ -1,0 +1,58 @@
+<div class="map" style="background-image: url('<%= @flat.image%> ')"></div>
+
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-xs-8">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p class="flat-show-address"><%= @flat.address %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="map">
+        <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=<%= @flat.address %>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+      </div>
+    </div>
+    <div class="col-xs-4">
+      <div class="flat-show-card">
+        <h5>Book this place!</h5>
+
+        <form action="">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">From:</span>
+            <input type="text" class="form-control" placeholder="12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-addon" id="basic-addon1">To:</span>
+            <input type="text" class="form-control" placeholder="18/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+      </div>
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+            <i class="fas fa-users"></i><span><%= @flat.number_of_guests %></span>
+          </div>
+          <div class="flex ml-3">
+            <i class="fas fa-euro-sign"></i> <%= @flat.price_per_night %>
+          </div>
+        </div>
+      </div>
+      <div class="flat-show-card">
+        <div class="flex-align">
+          <h6 class="no-mb">Share</h6>
+
+          <div class="flex">
+            <i class="fab fa-facebook-f fa-2x"></i>
+            <i class="fab fa-twitter fa-2x"></i>
+            <i class="fas fa-envelope-square fa-2x"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
